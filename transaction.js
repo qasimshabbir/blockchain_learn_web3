@@ -5,21 +5,19 @@ const Tx     = require('ethereumjs-tx').Transaction;
 const rpcUrl = 'http://localhost:7545';
 
 const web3 = new Web3(rpcUrl);
+//Account details
+const sender = "0xa46422854EBEbE1b2422046Be4a441daf4c4f738";
+const receiver = '0x9928cC7000c309ADcA90DDe6fBc1d6c9f07AEE67';
 
-const account1 = "0x3517a50F0f450aB286717838ed058934f55264BE";
-const account2 = '0x38b628418104440BC3F0ED861ED00C8df4dD8576';
+const PRIVATE_KEY_SENDER = "9dec73ac1c8ffa8edfdc9a9142a05513d288955b274d9964584898d437298d77";
 
-const PRIVATE_KEY_1 = "5c37e6835f41a5d1bd0886ce691ab4deddcb257951d66b0f57baa1ec1b4fb35e";
-const PRIVATE_KEY_2 = "94a4c06e599ad36a0198dc2dee8b30d12d45343077dd41892fa014bfec3a9a40";
+const privateKeySender = Buffer.from(PRIVATE_KEY_SENDER,'hex');
 
-const privateKey1 = Buffer.from(PRIVATE_KEY_1,'hex');
-const privateKey2 = Buffer.from(PRIVATE_KEY_2,'hex');
-
-web3.eth.getTransactionCount(account1, (error, txCount) => {
+web3.eth.getTransactionCount(sender, (error, txCount) => {
     console.log(txCount);
     const txObject = {
         nonce: web3.utils.toHex(txCount),
-        to: account2,
+        to: receiver,
         value: web3.utils.toHex(web3.utils.toWei('2', 'ether')),
         gasLimit: web3.utils.toHex(21000),
         gasPrice: web3.utils.toHex(web3.utils.toWei('10', 'gwei'))
@@ -28,7 +26,7 @@ web3.eth.getTransactionCount(account1, (error, txCount) => {
  
   // Sign the transaction
   const tx = new Tx(txObject)
-  tx.sign(privateKey1)
+  tx.sign(privateKeySender)
 
   const serializedTx = tx.serialize()
   const raw = '0x' + serializedTx.toString('hex')

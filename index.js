@@ -1,19 +1,22 @@
 //initialize web3
 const Web3 = require("web3");
-const rpcURL = "http://localhost:7545";
+const rpcURL = "HTTP://127.0.0.1:7545";
+
 const web3 = new Web3(rpcURL);
 
 //console.log(web3);
 
-let address = "0xFb6058AC92F3f6216625D35cE9045A8584dc02da";
+let address = "0xa46422854EBEbE1b2422046Be4a441daf4c4f738";
 //let address = web3.eth.accounts[0];
 
-web3.eth.getBalance(address, function(error, result) {
+web3.eth.getBalance(address, (error, result) => {
 	if(error){
 		console.log(error);
 	}else{ 
 		console.log(result);
+		console.log(web3.utils.fromWei(result,'gwei'));
 	}
+
 });
 /*
 const account1 = web3.eth.accounts[0];

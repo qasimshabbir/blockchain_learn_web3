@@ -12,6 +12,6 @@ web3.eth.getBlockNumber().then((latest) => {
       web3.eth.getBlock(latest - i).then(console.log)
     }
 })
-
+  
 let hash = '0xfdec00d9c5938f1e20232284145f324e637ec6368f4e08fa86e0d0a14e5b3dbd';
 web3.eth.getTransactionFromBlock(hash,2).then(console.log);

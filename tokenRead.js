@@ -1,15 +1,14 @@
 const Web3 = require('Web3');
-const TX = require('ethereumjs-tx');
 
 const rpcUrl = 'http://localhost:7545';
 
 const web3 = new Web3(rpcUrl);
 
-const account1 = "0x3517a50F0f450aB286717838ed058934f55264BE";
+//const account1 = "0x3517a50F0f450aB286717838ed058934f55264BE";
 
-const tokenAddres = '0x8E0ffB0CEDF5005E6BEb0A528d40dD40953ccFF3';
+const tokenAddres = '0x86f2612FDd226a32A915E892ec6E7a50843346EC';
 
-const abi=[
+const abi =[
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -329,9 +328,12 @@ const abi=[
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
-
+]
 const token = new web3.eth.Contract(abi,tokenAddres);
+
+token.methods.name().call((error,name)=>{
+	console.log(name);
+});
 
 token.methods.totalSupply().call((error,result) =>{
     console.log(result);
