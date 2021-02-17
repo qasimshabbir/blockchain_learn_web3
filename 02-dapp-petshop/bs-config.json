@@ -1,0 +1,6 @@
+{
+  "port": 56618,
+  "server": {
+    "baseDir": ["./src", "./build/contracts"]
+  }
+}
