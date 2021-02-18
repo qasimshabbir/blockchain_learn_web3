@@ -18,7 +18,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -41,7 +42,7 @@
     },
     {
       "inputs": [],
-      "name": "getAdopter",
+      "name": "getAdopters",
       "outputs": [
         {
           "internalType": "address[16]",
@@ -50,16 +51,17 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"petId\",\"type\":\"uint256\"}],\"name\":\"adopt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"adopters\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAdopter\",\"outputs\":[{\"internalType\":\"address[16]\",\"name\":\"\",\"type\":\"address[16]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/Education/Blockchain/learn-dapps/04-dapp-petshop-reduxtoolkit/contracts/Adoption.sol\":\"Adoption\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Education/Blockchain/learn-dapps/04-dapp-petshop-reduxtoolkit/contracts/Adoption.sol\":{\"keccak256\":\"0xc0e0e4b36dbb1884ea86fd70e3f0f5955f5f4dc53a6ab739c4b3007be2f2f609\",\"urls\":[\"bzz-raw://d09d2735d7a26330e0120603793fa42b616fbb343a7f96f819b631980b9d9ee3\",\"dweb:/ipfs/QmNbAzp5ihHhcWqkMN3mhcEPiYnsTMh1Qve6beop3Zr3ZD\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506102a3806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806343ae80d314610046578063654486c81461009e5780638588b2c5146100e4575b600080fd5b6100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610126565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100a6610159565b6040518082601060200280838360005b838110156100d15780820151818401526020810190506100b6565b5050505090500191505060405180910390f35b610110600480360360208110156100fa57600080fd5b81019080803590602001909291905050506101da565b6040518082815260200191505060405180910390f35b6000816010811061013357fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b61016161024a565b60006010806020026040519081016040528092919082601080156101d0576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019060010190808311610186575b5050505050905090565b600080821180156101ec5750600f8211155b6101f557600080fd5b336000836010811061020357fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b60405180610200016040528060109060208202803683378082019150509050509056fea2646970667358221220e44360c7a9215b4f6ad28a90c560a273fef4a9c1dc5ef019c60968ac8a2feaed64736f6c63430007000033",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806343ae80d314610046578063654486c81461009e5780638588b2c5146100e4575b600080fd5b6100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610126565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100a6610159565b6040518082601060200280838360005b838110156100d15780820151818401526020810190506100b6565b5050505090500191505060405180910390f35b610110600480360360208110156100fa57600080fd5b81019080803590602001909291905050506101da565b6040518082815260200191505060405180910390f35b6000816010811061013357fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b61016161024a565b60006010806020026040519081016040528092919082601080156101d0576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019060010190808311610186575b5050505050905090565b600080821180156101ec5750600f8211155b6101f557600080fd5b336000836010811061020357fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b60405180610200016040528060109060208202803683378082019150509050509056fea2646970667358221220e44360c7a9215b4f6ad28a90c560a273fef4a9c1dc5ef019c60968ac8a2feaed64736f6c63430007000033",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.0+commit.9e61f92b\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"petId\",\"type\":\"uint256\"}],\"name\":\"adopt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"adopters\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAdopters\",\"outputs\":[{\"internalType\":\"address[16]\",\"name\":\"\",\"type\":\"address[16]\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/D/Education/Blockchain/learn-dapps/04-dapp-petshop-reduxtoolkit/contracts/Adoption.sol\":\"Adoption\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Education/Blockchain/learn-dapps/04-dapp-petshop-reduxtoolkit/contracts/Adoption.sol\":{\"keccak256\":\"0x036abd628f80f094f70c77cb6ad3b975663d2e658a7fc0c321597911234ac86d\",\"urls\":[\"bzz-raw://075dea1a663065b23a39e7b72a8964c187d3be43ca59516e8b1e064fc76b24d0\",\"dweb:/ipfs/QmRZuL1aZKgXuzAEHPCsVVEa3Gs4KnZvmwrgv36xUvLCY7\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102a3806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80633de4eb171461004657806343ae80d31461008c5780638588b2c5146100e4575b600080fd5b61004e610126565b6040518082601060200280838360005b8381101561007957808201518184015260208101905061005e565b5050505090500191505060405180910390f35b6100b8600480360360208110156100a257600080fd5b81019080803590602001909291905050506101a7565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610110600480360360208110156100fa57600080fd5b81019080803590602001909291905050506101da565b6040518082815260200191505060405180910390f35b61012e61024a565b600060108060200260405190810160405280929190826010801561019d576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019060010190808311610153575b5050505050905090565b600081601081106101b457fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080821180156101ec5750600f8211155b6101f557600080fd5b336000836010811061020357fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b60405180610200016040528060109060208202803683378082019150509050509056fea2646970667358221220f269135b42dbec8baf5720c80a8643c6d90f04e7103e792b668f0eb46c379a9064736f6c63430007000033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80633de4eb171461004657806343ae80d31461008c5780638588b2c5146100e4575b600080fd5b61004e610126565b6040518082601060200280838360005b8381101561007957808201518184015260208101905061005e565b5050505090500191505060405180910390f35b6100b8600480360360208110156100a257600080fd5b81019080803590602001909291905050506101a7565b604051808273ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610110600480360360208110156100fa57600080fd5b81019080803590602001909291905050506101da565b6040518082815260200191505060405180910390f35b61012e61024a565b600060108060200260405190810160405280929190826010801561019d576020028201915b8160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019060010190808311610153575b5050505050905090565b600081601081106101b457fe5b016000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080821180156101ec5750600f8211155b6101f557600080fd5b336000836010811061020357fe5b0160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550819050919050565b60405180610200016040528060109060208202803683378082019150509050509056fea2646970667358221220f269135b42dbec8baf5720c80a8643c6d90f04e7103e792b668f0eb46c379a9064736f6c63430007000033",
   "immutableReferences": {},
-  "sourceMap": "27:350:0:-:0;;;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "27:350:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;53:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;279:95;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;109:162;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;53:27;;;;;;;;;;;;;;;;;;;;;;;:::o;279:95::-;321:18;;:::i;:::-;358:8;351:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:95;:::o;109:162::-;151:4;183:1;175:5;:9;:23;;;;;196:2;188:5;:10;;175:23;167:32;;;;;;228:10;210:8;219:5;210:15;;;;;;;;;:28;;;;;;;;;;;;;;;;;;258:5;251:12;;109:162;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.7.0;\r\n\r\ncontract Adoption{\r\n\r\n    address[16] public adopters;\r\n    //Adopting a pet\r\n    function adopt(uint petId) public returns(uint){\r\n        require(petId > 0 && petId <=15);\r\n        adopters[petId] = msg.sender;\r\n\r\n        return petId;\r\n    }\r\n\r\n    function getAdopter() public view returns(address[16] memory){\r\n        return adopters;\r\n    }\r\n}",
+  "sourceMap": "27:351:0:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "27:351:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:96;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;53:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;109:162;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;279:96;322:18;;:::i;:::-;359:8;352:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:96;:::o;53:27::-;;;;;;;;;;;;;;;;;;;;;;;:::o;109:162::-;151:4;183:1;175:5;:9;:23;;;;;196:2;188:5;:10;;175:23;167:32;;;;;;228:10;210:8;219:5;210:15;;;;;;;;;:28;;;;;;;;;;;;;;;;;;258:5;251:12;;109:162;;;:::o;-1:-1:-1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.7.0;\r\n\r\ncontract Adoption{\r\n\r\n    address[16] public adopters;\r\n    //Adopting a pet\r\n    function adopt(uint petId) public returns(uint){\r\n        require(petId > 0 && petId <=15);\r\n        adopters[petId] = msg.sender;\r\n\r\n        return petId;\r\n    }\r\n\r\n    function getAdopters() public view returns(address[16] memory){\r\n        return adopters;\r\n    }\r\n}",
   "sourcePath": "D:/Education/Blockchain/learn-dapps/04-dapp-petshop-reduxtoolkit/contracts/Adoption.sol",
   "ast": {
     "absolutePath": "/D/Education/Blockchain/learn-dapps/04-dapp-petshop-reduxtoolkit/contracts/Adoption.sol",
@@ -523,7 +525,7 @@
             "body": {
               "id": 41,
               "nodeType": "Block",
-              "src": "340:34:0",
+              "src": "341:34:0",
               "statements": [
                 {
                   "expression": {
@@ -533,7 +535,7 @@
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
                     "referencedDeclaration": 5,
-                    "src": "358:8:0",
+                    "src": "359:8:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$16_storage",
                       "typeString": "address[16] storage ref"
@@ -542,24 +544,24 @@
                   "functionReturnParameters": 38,
                   "id": 40,
                   "nodeType": "Return",
-                  "src": "351:15:0"
+                  "src": "352:15:0"
                 }
               ]
             },
             "documentation": null,
-            "functionSelector": "654486c8",
+            "functionSelector": "3de4eb17",
             "id": 42,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
-            "name": "getAdopter",
+            "name": "getAdopters",
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
               "id": 33,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "298:2:0"
+              "src": "299:2:0"
             },
             "returnParameters": {
               "id": 38,
@@ -573,7 +575,7 @@
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 42,
-                  "src": "321:18:0",
+                  "src": "322:18:0",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -585,7 +587,7 @@
                       "id": 34,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
-                      "src": "321:7:0",
+                      "src": "322:7:0",
                       "stateMutability": "nonpayable",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -603,7 +605,7 @@
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "329:2:0",
+                      "src": "330:2:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_16_by_1",
@@ -612,7 +614,7 @@
                       "value": "16"
                     },
                     "nodeType": "ArrayTypeName",
-                    "src": "321:11:0",
+                    "src": "322:11:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$16_storage_ptr",
                       "typeString": "address[16]"
@@ -622,20 +624,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "320:20:0"
+              "src": "321:20:0"
             },
             "scope": 43,
-            "src": "279:95:0",
+            "src": "279:96:0",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "public"
           }
         ],
         "scope": 44,
-        "src": "27:350:0"
+        "src": "27:351:0"
       }
     ],
-    "src": "0:377:0"
+    "src": "0:378:0"
   },
   "legacyAST": {
     "attributes": {
@@ -1131,14 +1133,14 @@
           {
             "attributes": {
               "documentation": null,
-              "functionSelector": "654486c8",
+              "functionSelector": "3de4eb17",
               "implemented": true,
               "isConstructor": false,
               "kind": "function",
               "modifiers": [
                 null
               ],
-              "name": "getAdopter",
+              "name": "getAdopters",
               "overrides": null,
               "scope": 43,
               "stateMutability": "view",
@@ -1155,7 +1157,7 @@
                 "children": [],
                 "id": 33,
                 "name": "ParameterList",
-                "src": "298:2:0"
+                "src": "299:2:0"
               },
               {
                 "children": [
@@ -1186,7 +1188,7 @@
                             },
                             "id": 34,
                             "name": "ElementaryTypeName",
-                            "src": "321:7:0"
+                            "src": "322:7:0"
                           },
                           {
                             "attributes": {
@@ -1203,22 +1205,22 @@
                             },
                             "id": 35,
                             "name": "Literal",
-                            "src": "329:2:0"
+                            "src": "330:2:0"
                           }
                         ],
                         "id": 36,
                         "name": "ArrayTypeName",
-                        "src": "321:11:0"
+                        "src": "322:11:0"
                       }
                     ],
                     "id": 37,
                     "name": "VariableDeclaration",
-                    "src": "321:18:0"
+                    "src": "322:18:0"
                   }
                 ],
                 "id": 38,
                 "name": "ParameterList",
-                "src": "320:20:0"
+                "src": "321:20:0"
               },
               {
                 "children": [
@@ -1239,40 +1241,54 @@
                         },
                         "id": 39,
                         "name": "Identifier",
-                        "src": "358:8:0"
+                        "src": "359:8:0"
                       }
                     ],
                     "id": 40,
                     "name": "Return",
-                    "src": "351:15:0"
+                    "src": "352:15:0"
                   }
                 ],
                 "id": 41,
                 "name": "Block",
-                "src": "340:34:0"
+                "src": "341:34:0"
               }
             ],
             "id": 42,
             "name": "FunctionDefinition",
-            "src": "279:95:0"
+            "src": "279:96:0"
           }
         ],
         "id": 43,
         "name": "ContractDefinition",
-        "src": "27:350:0"
+        "src": "27:351:0"
       }
     ],
     "id": 44,
     "name": "SourceUnit",
-    "src": "0:377:0"
+    "src": "0:378:0"
   },
   "compiler": {
     "name": "solc",
     "version": "0.7.0+commit.9e61f92b.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0x68adB755c39417de3A2E6c266B7c53d2ea95ee21",
+      "transactionHash": "0xc597b400ceb8806ab2ee84bc0c8201e10512dc179a86d44ab19c18936a2b7ef2"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xAf1c343f3d8e634DF226Dd332243F1d447c51C9A",
+      "transactionHash": "0x043ff862f035b1c9ab80c32c0ff778f02a84f10cef89e374405a46136ac9c3f1"
+    }
+  },
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-17T12:58:01.923Z",
+  "updatedAt": "2021-02-18T12:26:39.556Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

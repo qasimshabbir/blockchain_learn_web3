@@ -1,39 +1,58 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+.header {
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  float: left;
+  max-width: 300px;
+  margin: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.container {
+  padding: 5px 5px;
+  text-align: left;
+  font-size: small;
 }
+.container h4{
+  text-align: center;
+}
+.adopted{
+  color:darkgreen;
+}
+
+.card img{
+  width: 140px;
+  height: 140px;
+  margin: 5px;
+  text-align: center;
+}
+
+img.loader{
+  width:20px;
+  height: 20px;
+}
+
+.error{
+  color:darkred;
+  border: 1px;
+  border-style: solid;
+  border-color: darkred;
+  padding: 5px;
+  margin: 2px
+}
+
+
