@@ -15,7 +15,7 @@ module.exports = {
         return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/e80fe286acd444beb4496818b416452d")
       },
       network_id: 3,
-      from: "0x3914e1fDc20FBf2166B97A144c543234da1BEB67",//my ropsten account with ether
+      from: "0x3914e1fDc20FBf2166B97A144c543234da1BEB67",
     },
     develop: {
       port: 8545

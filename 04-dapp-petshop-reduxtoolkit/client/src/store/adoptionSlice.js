@@ -60,13 +60,13 @@ export const adoptPet = createAsyncThunk(
     console.log("In adoptPet",accounts);
     //calling contract method and doing transaction
     let result={};
-    try{
+    //try{
       result = await contract.methods.adopt(petId).send({from: accounts[0]});
       console.log("Async Adopt Pet result:",result);
-    }catch(error){
-      console.log("Async Adopt Pet error:",error);
-      return thunkApi.rejectWithValue('Transaction cancelled by user'); 
-    } 
+    //}catch(error){
+    //  console.log("Async Adopt Pet error:",error);
+    //  return thunkApi.rejectWithValue(error.message); 
+    //} 
     //refreshing the adopters
     const adopters = await contract.methods.getAdopters().call();
     return {result,adopters};
