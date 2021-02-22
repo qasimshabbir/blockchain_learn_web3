@@ -73,7 +73,7 @@ export const adoptPet = createAsyncThunk(
   }
 );
  
-export const counterSlice = createSlice({
+export const adoptionSlice = createSlice({
   name: 'adoptionSlice',
   initialState: {
     web3: null,
@@ -126,4 +126,4 @@ export const counterSlice = createSlice({
   },
 });
 
-export default counterSlice.reducer;
+export default adoptionSlice.reducer;
