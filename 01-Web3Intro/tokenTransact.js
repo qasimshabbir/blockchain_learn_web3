@@ -6,16 +6,15 @@ const rpcUrl = 'http://localhost:7545';
 const web3 = new Web3(rpcUrl);
 
 
-const account1 = "0x3517a50F0f450aB286717838ed058934f55264BE";
-const account2 = '0x38b628418104440BC3F0ED861ED00C8df4dD8576';
+const account1 = "0x3c762CAd59F889DA707a4b8Ba10dAf5Cc0B1d020";
+const account2 = '0xc0e26965f7B86bE8E6662ACf74FEbAf75B2c012A';
 
-const PRIVATE_KEY_1 = "5c37e6835f41a5d1bd0886ce691ab4deddcb257951d66b0f57baa1ec1b4fb35e";
-const PRIVATE_KEY_2 = "94a4c06e599ad36a0198dc2dee8b30d12d45343077dd41892fa014bfec3a9a40";
+const PRIVATE_KEY_1 = "4f40c6ae8ef326254df515f32c23cfaffcd75c24776648488d3fa57396990bb9";
 
-const tokenAddress = '0xcAB10Ff4EF360BCcA2eB0567770bDF5dCD89c7FD';
+const tokenAddress = '0xd6587335C17F02e48ebCb85167bca7F99993F49E';
 
 const privateKey1 = Buffer.from(PRIVATE_KEY_1,'hex');
-const privateKey2 = Buffer.from(PRIVATE_KEY_2,'hex');
+
 
 const abi=[
 	{
@@ -340,9 +339,13 @@ const abi=[
 ];
 
 const token = new web3.eth.Contract(abi,tokenAddress);
-const data = token.methods.transfer(account1,100).encodeABI();
+token.methods.balanceOf(account1).call((err,res)=>{
+	console.log(account1," Balance is",res);
+})
 
-web3.eth.getTransactionCount(account2, (error, txCount) => {
+const data = token.methods.transfer(account2,100).encodeABI();
+
+web3.eth.getTransactionCount(account1, (error, txCount) => {
     const txObject = {
         nonce: web3.utils.toHex(txCount),
         gasLimit: web3.utils.toHex(900000),
@@ -353,7 +356,7 @@ web3.eth.getTransactionCount(account2, (error, txCount) => {
     }
     
     const tx = new TX(txObject);
-    tx.sign(privateKey2);
+    tx.sign(privateKey1);
     
 
     const serializeTx = tx.serialize();
@@ -361,5 +364,12 @@ web3.eth.getTransactionCount(account2, (error, txCount) => {
     web3.eth.sendSignedTransaction(raw,(err,txHash)=>{
         if(err) console.log(err);
         else console.log(txHash);
-    })
+    }).then(receipt=>{
+		console.log(receipt);
+	}).then((err,res)=>{
+		token.methods.balanceOf(account2).call((err,res)=>{
+			console.log(account1," Balance is",res);
+		})
+	})
 });
+

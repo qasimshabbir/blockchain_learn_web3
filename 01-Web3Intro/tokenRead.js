@@ -1,14 +1,16 @@
 const Web3 = require('Web3');
 
-const rpcUrl = 'http://localhost:7545';
-
+//const rpcUrl = 'http://localhost:7545';
+const rpcUrl = 'https://mainnet.infura.io/v3/e80fe286acd444beb4496818b416452d';
 const web3 = new Web3(rpcUrl);
 
 //const account1 = "0x3517a50F0f450aB286717838ed058934f55264BE";
 
-const tokenAddres = '0x86f2612FDd226a32A915E892ec6E7a50843346EC';
+//const tokenAddres = '0x86f2612FDd226a32A915E892ec6E7a50843346EC'; //local
+const tokenAddres = '0xB8c77482e45F1F44dE1745F52C74426C631bDD52'; //BNB Token
 
-const abi =[
+
+const erc20Abi =[
 	{
 		"inputs": [],
 		"stateMutability": "nonpayable",
@@ -329,13 +331,18 @@ const abi =[
 		"type": "function"
 	}
 ]
-const token = new web3.eth.Contract(abi,tokenAddres);
-
+const token = new web3.eth.Contract(erc20Abi,tokenAddres);
+let tokenName;
 token.methods.name().call((error,name)=>{
-	console.log(name);
+	tokenName=name;
+	console.log("Token Name:",name);
 });
 
 token.methods.totalSupply().call((error,result) =>{
-    console.log(result);
+    console.log(tokenName," total Supply is",result);
 });
 
+const tokenHolder = "0x77ebfe95f4712ea050fbd0ca868e442ba15ac21b";
+token.methods.balanceOf(tokenHolder).call((err,res)=>{
+	console.log(tokenHolder," Balance is",res);
+})
